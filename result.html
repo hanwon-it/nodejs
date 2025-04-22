@@ -4,10 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>결과</title>
+    <style>
+      body {
+        background-color: skyblue;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        margin: 1;
+      }
+      .container {
+        text-align: center;
+        background: white;
+        margin-top: 100px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 400px;
+      }
+      p {
+        display: block;
+        margin: 10px 0;
+      }
+    </style>
   </head>
   <body>
-    <h2>로그인 결과</h2>
-    <p>입력한 아이디: {{userid}}</p>
-    <p>입력한 비밀번호: {{userpw}}</p>
+    <div class="container">
+      <h2>로그인 결과</h2>
+      <p>입력한 아이디: {{userid}}</p>
+      <p>입력한 비밀번호: {{userpw}}</p>
+    </div>
   </body>
 </html>
