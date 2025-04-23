@@ -6,7 +6,7 @@ const router = express.Router();
  * /signup:
  *   post:
  *     summary: 회원가입
- *     description: 사용자가 회원 정보를 입력하여 가입을 처리합니다
+ *     description: 사용자가 회원 정보를 입력하여 가입을 진행합니다
  *     requestBody:
  *       required: true
  *       content:
@@ -73,7 +73,7 @@ const router = express.Router();
  * /user:
  *   post:
  *     summary: 회원정보 수정
- *     description: 사용자가 회원 정보를 수정합니다
+ *     description: 사용자의 회원 정보를 수정합니다
  *     requestBody:
  *       required: true
  *       content:
@@ -102,7 +102,7 @@ const router = express.Router();
  *       500:
  *         description: 서버 에러 오류
  *   delete:
- *     summary: 회원 탈퇴
+ *     summary: 계정 삭제
  *     description: 계정을 삭제합니다
  *     requestBody:
  *       required: true
@@ -116,7 +116,7 @@ const router = express.Router();
  *                 description: 삭제할 사용자 아이디
  *     responses:
  *       200:
- *         description: 회원 탈퇴 성공
+ *         description: 계정 삭제 성공
  *       400:
  *         description: 잘못된 요청
  *       500:
