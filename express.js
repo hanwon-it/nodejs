@@ -5,7 +5,7 @@ const port = 3000;
 
 const swaggerUi = require("swagger-ui-express");
 const swaggerSpec = require("./swagger");
-//const postRoutes = require("./routes/posts");
+
 const authRoutes = require("./routes/auth.js");
 
 app.use(express.json());
@@ -14,7 +14,6 @@ app.use(express.json());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // 실제 API 라우트
-// app.use("/posts", postRoutes);
 app.use("/auth", authRoutes);
 
 app.listen(port, () => {

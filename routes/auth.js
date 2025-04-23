@@ -87,13 +87,13 @@ const router = express.Router();
  *               email:
  *                  type: string
  *                  format: email
- *                  description: 사용자 새 이메일
+ *                  description: 사용할 새 이메일
  *               name:
  *                  type: string
- *                  description: 사용자 새 이름
+ *                  description: 사용할 새 이름
  *               phone:
  *                  type: string
- *                  description: 사용자 새 번호
+ *                  description: 사용할 새 번호
  *     responses:
  *       201:
  *         description: 정보 수정 성공
