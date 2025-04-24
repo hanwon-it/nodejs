@@ -28,6 +28,20 @@ app.post("/login", (req, res) => {
   res.send(`로그인 성공: ${userid}`);
 });
 
+app.get("/me", (req, res) => {
+  if (req.session.user) {
+    res.json(req.session.user);
+  } else {
+    res.status(401).send("로그인이 필요합니다.");
+  }
+});
+
+app.get("/logout", (req, res) => {
+  req.session.destroy(() => {
+    res.send("로그아웃 되었습니다");
+  });
+});
+
 app.listen(3000, () => {
   console.log("서버 실행 중");
 });
