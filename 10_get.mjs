@@ -2,6 +2,7 @@ import express from "express";
 import fs from "fs";
 
 const app = express();
+app.use(express.json());
 
 app.get("/", (req, res) => {
   fs.readFile("login2.html", (err, data) => {
