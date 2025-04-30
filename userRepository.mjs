@@ -40,3 +40,19 @@ export async function createUser(
   );
   return result.insertId;
 }
+
+// update
+
+export async function updateUserEmail(idx, newEmail) {
+  const [result] = await db.query("update member set email=? where idx=?", [
+    newEmail,
+    idx,
+  ]);
+  return result.affectedRows; // 몇 개의 행이 수정됐는지 알수 있다
+}
+
+// delete
+export async function deleteUser(idx) {
+  const [result] = await db.query("delete from member where idx=?", [idx]);
+  return result.affectedRows; // 몇 개의 행이 삭제됐는지
+}
